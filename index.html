@@ -4,8 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="calculator-card">
+    <div class="form-section">
+        <div class="header">
+            <h2>Mortgage Calculator</h2>
+            <button class="clear-btn">Clear All</button>
+        </div>
+
+        <div class="input-group">
+            <label>Mortgage Amount</label>
+            <div class="input-wrapper">
+                <span class="prefix">£</span>
+                <input type="number" id="amount" value="300000">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-group">
+                <label>Mortgage Term</label>
+                <div class="input-wrapper">
+                    <input type="number" id="term" value="25">
+                    <span class="suffix">years</span>
+                </div>
+            </div>
+            <div class="input-group">
+                <label>Interest Rate</label>
+                <div class="input-wrapper">
+                    <input type="number" id="rate" step="0.01" value="5.25">
+                    <span class="suffix">%</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label>Mortgage Type</label>
+            <label class="radio-container">
+                <input type="radio" name="type" value="repayment" checked>
+                <span class="radio-label">Repayment</span>
+            </label>
+            <label class="radio-container">
+                <input type="radio" name="type" value="interest-only">
+                <span class="radio-label">Interest Only</span>
+            </label>
+        </div>
+
+        <button id="calc-btn" class="main-button">
+            <i class="fa-solid fa-calculator"></i> Calculate Repayments
+        </button>
+    </div>
+
+    <div class="results-section">
+        <h3>Your results</h3>
+        <p class="description">Your results are shown below based on the information you provided...</p>
+        
+        <div class="result-box">
+            <span class="label">Your monthly repayments</span>
+            <div id="monthly-display" class="price-large">£1,797.74</div>
+            <hr>
+            <span class="label">Total you'll repay over the term</span>
+            <div id="total-display" class="price-medium">£539,322.94</div>
+        </div>
+    </div>
+</div>
     
 </body>
 </html>
